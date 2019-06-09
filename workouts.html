@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+
+  <title>FitNaas</title>
+</head>
+
+<body>
+    <div id="page">
+      <div id="pagetop">
+		<h1>FitNaas</h1>
+        <div class="links">
+            <ul>
+           	   	<li><a href="#">Creators</a></li>
+               	<li><a href="#">Workouts</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </div>
+     </div>
+
+      <div id="header">   OSU CS290 Group 26     </div>
+      <div class="workout-container" id="main">
+
+          <article class="workout">
+            <div class="workout-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+
+
+            <div class="workout-content">
+              <p class="workout-title">
+                Workout Title
+              </p>
+              <div class="exercise">
+                <p class="title">
+                  Exercise
+                </p>
+                <p class="content">
+                  Push-ups
+                </p>
+              </div>
+              <div class="sets">
+                <p class="title">
+                  Sets
+                </p>
+                <p class="content">
+                  5
+                </p>
+              </div>
+              <div class="reps">
+                <p class="title">
+                  Reps
+                </p>
+                <p class="content">
+                  10
+                </p>
+              </div>
+              <p class="workout-creator">
+                <a href="#">WorkoutCreator</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="workout">
+            <div class="workout-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="workout-content">
+              <p class="workout-title">
+                Another Workout Title
+              </p>
+              <div class="exercise">
+                <p class="title">
+                  Exercise
+                </p>
+                <p class="content">
+                  Sit-ups
+                </p>
+              </div>
+              <div class="sets">
+                <p class="title">
+                  Sets
+                </p>
+                <p class="content">
+                  2
+                </p>
+              </div>
+              <div class="reps">
+                <p class="title">
+                  Reps
+                </p>
+                <p class="content">
+                  15
+                </p>
+              </div>
+              <p class="workout-creator">
+                <a href="#">RoadRunner</a>
+              </p>
+            </div>
+          </article>
+
+          <article class="workout">
+            <div class="workout-icon">
+              <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="workout-content">
+              <p class="workout-title">
+                Another Workout Title
+              </p>
+              <div class="exercise">
+                <p class="title">
+                  Exercise
+                </p>
+                <p class="content">
+                  Bicep curls
+                </p>
+              </div>
+              <div class="sets">
+                <p class="title">
+                  Sets
+                </p>
+                <p class="content">
+                  8
+                </p>
+              </div>
+              <div class="reps">
+                <p class="title">
+                  Reps
+                </p>
+                <p class="content">
+                  33
+                </p>
+              </div>
+              <p class="workout-creator">
+                <a href="#">AnotherCreator</a>
+              </p>
+            </div>
+          </article>
+
+          <div class="clear">&nbsp;</div>
+
+      </div>
+
+      <div id="footer">
+        <p>
+      </div>
+
+      <button type="button" id="create-workout-button"><i class="fas fa-bullhorn"></i></button>
+
+      <div id="modal-backdrop" class="hidden"></div>
+      <div id="create-workout-modal" class="hidden">
+        <div class="modal-dialog">
+
+          <div class="modal-header">
+            <h3>Create a Workout</h3>
+            <button type="button" class="modal-close-button">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <div class="workout-input-element">
+              <label for="workout-text-input">Twit text</label>
+              <textarea id="workout-text-input"></textarea>
+            </div>
+          <div class="workout-input-element">
+            <label for="workout-author-input">Author</label>
+            <input type="text" id="workout-author-input">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="modal-cancel-button">Cancel</button>
+          <button type="button" class="modal-accept-button">Create Workout</button>
+        </div>
+
+
+      </div>
+      </div>
+
+    </body>
