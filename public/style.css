@@ -1,149 +1,53 @@
-html, body {
-text-align: center;
-}
-p {text-align: left;}
-
 body {
-	margin: 0;
-	padding: 0;
-	background: #C1C1C1;
-	background-image:url(background.png);
-	text-align: left;
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	color: #FFFFFF;
-}
-*
-{
-  margin: 0 auto 0 auto;
- text-align:left;}
-
-
-html, body {
-text-align: center;
-}
-p {text-align: left;}
-
-#page
-{
-  width:758px;
-  padding-left:20px;
-  padding-right:20px;
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #eee;
 }
 
-#header
-{
-background-image:url(header.png);
-background-repeat:no-repeat;
-width:798px;
-height:34px;
-margin:0 auto 0 auto;
-color:#267B9B;
-text-align:center;
-font-style:italic;
+a {
+  text-decoration: none;
 }
 
-#pagetop
-{
-height:143px;
+.site-title {
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: 100;
+	background-color: blue;
+  color: #fff;
 }
 
-#pagetop h1
-{
-display:block;
-float:left;
-line-height:90px;
-color:#FFFFFF;
-text-align:left;
-font-size:27px;
-font-weight:bold;
-font-family:Arial, Helvetica, sans-serif;
-float:left;
-margin-left:23px;
+.navbar {
+	background-color: white;
+  font-size: 18px;
+  line-height: 22px;
 }
 
-
-#pagetop ul {
-	padding: 0px;
-	list-style-type: none;
-	height:21px;
-	text-align:center;
-	height:90px;
-	overflow:hidden;
-}
-#pagetop ul li , #pagetop ul li a, #pagetop ul li a:visited{
-	display:block;
-	float:right;
-	margin: 0px;
-	text-align:center;
-	line-height:100px;
-	color:#FFFFFF;
-	padding-left:5px;
-	padding-right:5px;
-	font-size:14px;
-	font-weight:bold;
-	text-decoration:none;
+.navlist {
+  margin: 0 0 0 20px;
+  padding: 0;
 }
 
-#pagetop ul li a:hover{
-color:#65A9ED;
+.navitem {
+  display: inline-block;
 }
 
-#main
-{
-width:798px;
-background:url(content_back.png);
+a {
+	color: black;
 }
 
-#main .content
-{
-width:650px;
-text-align:justify;
-color:#000000;
-word-spacing:3px;
+a:hover,
+a:focus {
+  color: #319df6;
 }
 
-#main .content p
-{
-margin-top:8px;
-margin-bottom:8px;
+a:focus {
+  outline: none;
 }
 
-#main .content h1
-{
-font-size:19px;
-margin-bottom:12px;
-}
-
-.clear
-{
-clear:both;
-}
-
-
-#footer {
-display:block;
-width: 798px;
-height:50px;
-background: url(footer.png) no-repeat;
-text-align:right;
-font-size:10px;
-line-height:48px;
-}
-
-#footer p{
-padding-right:75px;
-text-align:right;
-}
-
-#footer, #footer a, #footer a:visited{
-text-decoration:none;
-color:#65A9ED;
-}
-
-#footer a:hover{
-text-decoration:none;
-color:#000000;
+.navlink a {
+  padding: 8px 10px;
+  display: inline-block;
 }
 
 .workout-container {
@@ -352,3 +256,19 @@ color:#000000;
   background-color: #087dde;
 }
 
+.error-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.error-container h2 {
+  margin: 10px 0;
+  font-size: 96px;
+  font-weight: 100;
+}
+
+.error-container h3 {
+  margin: 10px 0;
+  font-size: 36px;
+  font-weight: 400;
+}

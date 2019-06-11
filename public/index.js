@@ -12,7 +12,7 @@ function insertNewworkout(workout, theAuthor) {
 
 	 var workout_t = document.getElementById('twit-text-input');
 	workout_t.insertAdjacentHTML('beforeend', workoutTemplateHTML);
-  
+
 }
 
 
@@ -34,7 +34,7 @@ function handleModalAcceptClick() {
    * text and the twit attribution.  Give them an alert if they didn't.
    */
     if(workout.length == 0 || theAuthor.length == 0){
-    alert("plesase fill all the parts!")
+    alert("Please fill all the parts!")
   }
   else {
 
@@ -58,7 +58,7 @@ function handleModalAcceptClick() {
  */
 function showCreateWorkModal() {
 
-  document.getElementById('modal-backdrop').classList.remove('hidden'); 
+  document.getElementById('modal-backdrop').classList.remove('hidden');
   document.getElementById('create-workout-modal').classList.remove('hidden');
 
 }
@@ -82,7 +82,7 @@ function clearWorkoutInputValues() {
  */
 function hideCreateWorkModal() {
 
-  document.getElementById('modal-backdrop').classList.add('hidden'); 
+  document.getElementById('modal-backdrop').classList.add('hidden');
   document.getElementById('create-workout-modal').classList.add('hidden');
 
   clearWorkoutInputValues();
