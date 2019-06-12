@@ -2,17 +2,21 @@
   {
     "name": "Nathaniel Mohr",
     "photo": "http://web.engr.oregonstate.edu/~mohrna/CS290/Assignment1/Me.JPG"
+    "about": "An interesting thing about me is that I enjoy running and specifically long distance running. When I say long distance running I am talking about ultramarathons. I am currently training for my first ultra, a 50K, but am hoping that this will just be the beginning."
     },
     {
       "name": "Alannah Carr",
       "photo": "http://i66.tinypic.com/2nroqx5.jpg"
+      "about": "Something about me is that I spent last summer in South Africa, and I got to spend almost a week on safari in Krueger National Park. I got to see lions, giraffes, elephants and many other animals up close. I got to play with a lion cub!"
     },
     {
       "name": "Arman Askari Zadeh",
       "photo": "http://web.engr.oregonstate.edu/~askariza/untitled%20folder/image.jpg"
+      "about": "Something about me is that I am an international student, and I came to the US when I was 17 years old. This was a hard but exciting experience for me. I needed to figure out everything by myself. There were many things that I didn't know about life which I learned when I came here and every day for me was a challenge and a new experience."
     },
     {
       "name": "Samantha Mursuli",
       "photo": "http://web.engr.oregonstate.edu/~mursulis/me.JPG"
+      "about": "An interesting fact about me is that I am part Cuban and Mexican from my parents side of the family although I was born in the United States. This has given me the opportunity to travel to many places with family within these countries and explore the culture, food, and atmosphere. I have been on a road trip all around Mexico already and stopped at one major destination at every state."
     }
 ]
