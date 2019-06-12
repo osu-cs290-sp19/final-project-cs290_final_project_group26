@@ -88,3 +88,29 @@ function hideCreateWorkModal() {
   clearWorkoutInputValues();
 
 }
+
+window.addEventListener('DOMContentLoaded', function () {
+
+
+  var addingWorkout = document.getElementById('create-workout-button');
+  if (addingWorkout) {
+    addingWorkout.addEventListener('click', showCreateWorkModal);
+  }
+
+  var closingtheModal = document.querySelector('#create-workout-modal .modal-close-button');
+  if (closingtheModal) {
+    closingtheModal.addEventListener('click', hideCreateWorkModal);
+  }
+
+  var canceling = document.querySelector('#create-workout-modal .modal-cancel-button');
+  if (canceling) {
+    canceling.addEventListener('click', hideCreateWorkModal);
+  }
+
+  var Accepting = document.querySelector('#create-workout-modal .modal-accept-button');
+  if (Accepting) {
+    Accepting.addEventListener('click', handleModalAcceptClick);
+  }
+
+
+});
