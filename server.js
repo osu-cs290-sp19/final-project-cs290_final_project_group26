@@ -15,6 +15,8 @@ var mongoDBName = process.env.MONGO_DB_NAME;
 var mongoUrl =  'mongodb://' + mongoUser + ':' + mongoPassword + '@' + mongoHost + ':' + mongoPort + '/' + mongoDBName;
 var db = null;
 
+var creatorData = require('./creatorData');
+
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
@@ -27,12 +29,57 @@ app.get('/', function (req, res, next){
 });
 
 app.get('/about', function (req, res, next){
-  res.status(200).render('about');
+  var collection = db.collection('creators');
+  collection.find({}).toArray(function (err, creators){
+    if (err){
+      res.status(500).send({
+        error: "Error fetching creators from DB"
+      });
+    }else{
+      res.status(200).render('about', {creators: creators});
+    }
+  });
 });
 
 app.get('/workoutPage', function (req, res, next){
+  // var collection = db.collection('workouts');
+  // collection.find({}).toArray(function (err, workouts){
+  //   if(err){
+  //     res.status(500).send({});
+  //   }else{
+  //     res.status(200).render('workoutPage', {workouts: workouts});
+  //   }
+  // });
   res.status(200).render('workoutPage');
 });
+
+// app.post('/workoutPage/addWorkout', function (req, res, next) {
+//   if (req.body && ) {
+//     var collection = db.collection('workouts');
+//     var workout = {
+//
+//     };
+//     collection.updateOne(
+//       {},
+//       function (err, result) {
+//         if (err) {
+//           res.status(500).send({
+//             error: "Error inserting workout into DB"
+//           });
+//         } else {
+//           console.log("== update result:", result);
+//           if (result.matchedCount > 0) {
+//             res.status(200).send("Success");
+//           } else {
+//             next();
+//           }
+//         }
+//       }
+//     );
+//   } else {
+//     res.status(400).send("Request needs a body");
+//   }
+// });
 
 app.get('*', function (req, res, next) {
   res.status(404).render('404');
