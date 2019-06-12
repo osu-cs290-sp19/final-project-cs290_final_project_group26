@@ -38,7 +38,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #319df6;
+  color: blue;
 }
 
 a:focus {
@@ -56,13 +56,15 @@ h1{
 
 .creator_container {
   position: relative;
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .creator {
   position: relative;
-  display: inline-block;
+  text-align: center;
+  justify-content: center;
   margin: 10px 0px;
   padding: 20px 10px;
   border: 1px solid #dadada;
@@ -118,7 +120,7 @@ h1{
 }
 
 .workout-creator a:hover {
-  color:#65A9ED;
+  color: blue;
 }
 
 .workout-creator a {
