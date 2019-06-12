@@ -1,0 +1,29 @@
+<button type="button" id="create-workout-button"><i class="fas fa-bullhorn"></i></button>
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="create-workout-modal" class="hidden">
+  <div class="modal-dialog">
+
+    <div class="modal-header">
+      <h3>Create a Workout</h3>
+      <button type="button" class="modal-close-button">&times;</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="workout-input-element">
+        <label for="workout-text-input">Twit text</label>
+        <textarea id="workout-text-input"></textarea>
+      </div>
+    <div class="workout-input-element">
+      <label for="workout-author-input">Author</label>
+      <input type="text" id="workout-author-input">
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="modal-cancel-button">Cancel</button>
+    <button type="button" class="modal-accept-button">Create Workout</button>
+  </div>
+
+</div>
+</div>

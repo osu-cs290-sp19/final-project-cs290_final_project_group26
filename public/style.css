@@ -50,6 +50,34 @@ a:focus {
   display: inline-block;
 }
 
+h1{
+  text-align: center;
+}
+
+.creator_container {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.creator {
+  position: relative;
+  display: inline-block;
+  margin: 10px 0px;
+  padding: 20px 10px;
+  border: 1px solid #dadada;
+  width: 600px;
+  border-radius: 2px;
+  background-color: white;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.creator_name {
+  text-align: center;
+  font-weight: bold;
+}
+
 .workout-container {
   position: relative;
   display: block;
@@ -96,6 +124,7 @@ a:focus {
 .workout-creator a {
   color: black;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .workout-content .title {
