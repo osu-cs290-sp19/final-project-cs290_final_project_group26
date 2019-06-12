@@ -1,9 +1,12 @@
 
-function insertNewworkout(workout, theAuthor) {
+function insertNewworkout(workout, exercise, reps, sets, theAuthor) {
 
 
 	var workoutcontext = {
   		workout: workout,
+		exercise: exercise,
+		reps: reps,
+		sets: sets,
  		author: theAuthor
 	};
 
@@ -27,19 +30,25 @@ var Everyworkout = [];
 function handleModalAcceptClick() {
 
   var workout = document.getElementById('workout-text-input').value;
+  var exercise = document.getElementById('workout-exercise-input').value;
+  var reps = document.getElementById('workout-rep-input').value;
+  var sets = document.getElementById('workout-set-input').value;
   var theAuthor = document.getElementById('workout-author-input').value;
 
   /*
    * Only generate the new twit if the user supplied values for both the twit
    * text and the twit attribution.  Give them an alert if they didn't.
    */
-    if(workout.length == 0 || theAuthor.length == 0){
+    if(workout.length == 0 || exercise.length == 0 || reps.length == 0 || sets.length == 0 || theAuthor.length == 0){
     alert("Please fill all the parts!")
   }
   else {
-
+	//insertNewworkout(workout, exercise, reps, sets, theAuthor);
       Everyworkout.push({
       workout: workout,
+      exercise: exercise,
+      reps: reps,
+      sets: sets,
       author: theAuthor
     });
 
@@ -70,7 +79,10 @@ function showCreateWorkModal() {
 function clearWorkoutInputValues() {
 
   document.getElementById('workout-text-input').value = "";
-  document.getElementById('workout-attribution-input').value ="";
+  document.getElementById('workout-exercise-input').value = "";
+  document.getElementById('workout-rep-input').value = "";
+  document.getElementById('workout-set-input').value = "";
+  document.getElementById('workout-author-input').value = "";
 
 }
 
