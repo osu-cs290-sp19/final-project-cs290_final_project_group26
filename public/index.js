@@ -1,22 +1,4 @@
 
-function insertNewworkout(workout, theAuthor) {
-
-
-	var workoutcontext = {
-  		workout: workout,
- 		author: theAuthor
-	};
-
-	var workoutTemplateHTML = Handlebars.templates.workoutTemplate(workoutcontext);
-
-
-	 var workout_t = document.getElementById('twit-text-input');
-	workout_t.insertAdjacentHTML('beforeend', workoutTemplateHTML);
-
-}
-
-
-var Everyworkout = [];
 
 /*
  * This function checks whether all of the required inputs were supplied by
@@ -24,33 +6,49 @@ var Everyworkout = [];
  * If the user did not supply a required input, they instead recieve an alert,
  * and no new workout is inserted.
  */
-function handleModalAcceptClick() {
+ function handleModalAcceptClick() {
 
-  var workout = document.getElementById('workout-text-input').value;
-  var theAuthor = document.getElementById('workout-author-input').value;
+  var workout_name = document.getElementById('workout-name-input').value.trim();
+  var routine = document.getElementById('workout-text-input').value.trim();
+	var workout_creator = document.getElementById('workout-creator-input').value.trim();
 
-  /*
-   * Only generate the new twit if the user supplied values for both the twit
-   * text and the twit attribution.  Give them an alert if they didn't.
-   */
-    if(workout.length == 0 || theAuthor.length == 0){
-    alert("Please fill all the parts!")
-  }
-  else {
+  if (!workout_name || !routine || !workout_creator) {
+    alert("You must fill in all of the fields!");
+  } else {
 
-      Everyworkout.push({
-      workout: workout,
-      author: theAuthor
+    var postRequest = new XMLHttpRequest();
+    var requestURL = '/workoutPage/addWorkout';
+    postRequest.open('POST', requestURL);
+
+    var requestBody = JSON.stringify({
+      name: workout_name,
+      routine: routine,
+			creator: workout_creator
     });
 
+    postRequest.addEventListener('load', function (event) {
+      if (event.target.status === 200) {
+        var workoutTemplate = Handlebars.templates.workoutTemplate;
+        var newWorkoutHTML = workoutTemplate({
+					name: workout_name,
+					routine: routine,
+					creator: workout_creator
+        });
+        var workoutContainer = document.querySelector('.workout-container');
+        workoutContainer.insertAdjacentHTML('beforeend', newWorkoutHTML);
+      } else {
+        alert("Error storing workout: " + event.target.response);
+      }
+    });
+
+    postRequest.setRequestHeader('Content-Type', 'application/json');
+    postRequest.send(requestBody);
 
     hideCreateWorkModal();
 
   }
+
 }
-
-
-
 
 /*
  * This function shows the modal to create a twit when the "create twit"
@@ -70,7 +68,8 @@ function showCreateWorkModal() {
 function clearWorkoutInputValues() {
 
   document.getElementById('workout-text-input').value = "";
-  document.getElementById('workout-attribution-input').value ="";
+	document.getElementById('workout-name-input').value = "";
+  document.getElementById('workout-creator-input').value ="";
 
 }
 
@@ -107,9 +106,9 @@ window.addEventListener('DOMContentLoaded', function () {
     canceling.addEventListener('click', hideCreateWorkModal);
   }
 
-  var Accepting = document.querySelector('#create-workout-modal .modal-accept-button');
-  if (Accepting) {
-    Accepting.addEventListener('click', handleModalAcceptClick);
+  var accept = document.querySelector('#create-workout-modal .modal-accept-button');
+  if (accept) {
+    accept.addEventListener('click', handleModalAcceptClick);
   }
 
 

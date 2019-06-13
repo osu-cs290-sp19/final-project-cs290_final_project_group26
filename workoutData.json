@@ -1,32 +1,17 @@
 [
   {
     "name": "Workout Title",
-    "exercises":[
-      {"exercise_name": "Push-ups",
-       "sets": 5,
-       "reps": 10
-     },
-    ],
+    "routine":"Push-ups: 5 sets, 10 reps",
     "creator": "WorkoutCreator"
   },
   {
     "name": "Another Workout Title",
-    "exercises":[
-      {"exercise_name": "Sit-ups",
-       "sets": 2,
-       "reps": 15
-     }
-    ],
+    "routine":"Sit-ups: 2 sets, 15 reps",
     "creator": "RoadRunner"
   },
   {
     "name": "Another Workout Title",
-    "exercises":[
-      {"exercise_name": "Bicep Curls",
-       "sets": 8,
-       "reps": 33
-     }
-    ],
+    "routine":"Bicep Curls: 8 sets 33 reps",
     "creator": "Another Creator"
   }
 ]
