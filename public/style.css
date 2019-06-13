@@ -4,6 +4,16 @@ body {
   background-color: #eee;
 }
 
+.home-page {
+  text-align:left;
+  padding: 25px 300px;
+  line-height: 20px;
+}
+
+h1 {
+  text-align: left;
+}
+
 a {
   text-decoration: none;
 }
@@ -48,10 +58,6 @@ a:focus {
 .navlink a {
   padding: 8px 10px;
   display: inline-block;
-}
-
-h1{
-  text-align: center;
 }
 
 .creator_container {
