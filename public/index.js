@@ -1,4 +1,28 @@
 
+<<<<<<< HEAD
+=======
+function insertNewworkout(workout, exercise, reps, sets, theAuthor) {
+
+
+	var workoutcontext = {
+  		workout: workout,
+		exercise: exercise,
+		reps: reps,
+		sets: sets,
+ 		author: theAuthor
+	};
+
+	var workoutTemplateHTML = Handlebars.templates.workoutTemplate(workoutcontext);
+
+
+	 var workout_t = document.getElementById('twit-text-input');
+	workout_t.insertAdjacentHTML('beforeend', workoutTemplateHTML);
+
+}
+
+
+var Everyworkout = [];
+>>>>>>> 7486bc1e5d57833351e3f69e002becda95ea42b3
 
 /*
  * This function checks whether all of the required inputs were supplied by
@@ -8,6 +32,7 @@
  */
  function handleModalAcceptClick() {
 
+<<<<<<< HEAD
   var workout_name = document.getElementById('workout-name-input').value.trim();
   var routine = document.getElementById('workout-text-input').value.trim();
 	var workout_creator = document.getElementById('workout-creator-input').value.trim();
@@ -39,6 +64,29 @@
       } else {
         alert("Error storing workout: " + event.target.response);
       }
+=======
+  var workout = document.getElementById('workout-text-input').value;
+  var exercise = document.getElementById('workout-exercise-input').value;
+  var reps = document.getElementById('workout-rep-input').value;
+  var sets = document.getElementById('workout-set-input').value;
+  var theAuthor = document.getElementById('workout-author-input').value;
+
+  /*
+   * Only generate the new twit if the user supplied values for both the twit
+   * text and the twit attribution.  Give them an alert if they didn't.
+   */
+    if(workout.length == 0 || exercise.length == 0 || reps.length == 0 || sets.length == 0 || theAuthor.length == 0){
+    alert("Please fill all the parts!")
+  }
+  else {
+	//insertNewworkout(workout, exercise, reps, sets, theAuthor);
+      Everyworkout.push({
+      workout: workout,
+      exercise: exercise,
+      reps: reps,
+      sets: sets,
+      author: theAuthor
+>>>>>>> 7486bc1e5d57833351e3f69e002becda95ea42b3
     });
 
     postRequest.setRequestHeader('Content-Type', 'application/json');
@@ -68,8 +116,15 @@ function showCreateWorkModal() {
 function clearWorkoutInputValues() {
 
   document.getElementById('workout-text-input').value = "";
+<<<<<<< HEAD
 	document.getElementById('workout-name-input').value = "";
   document.getElementById('workout-creator-input').value ="";
+=======
+  document.getElementById('workout-exercise-input').value = "";
+  document.getElementById('workout-rep-input').value = "";
+  document.getElementById('workout-set-input').value = "";
+  document.getElementById('workout-author-input').value = "";
+>>>>>>> 7486bc1e5d57833351e3f69e002becda95ea42b3
 
 }
 
